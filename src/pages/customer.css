@@ -1,0 +1,7 @@
+.customer-card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}

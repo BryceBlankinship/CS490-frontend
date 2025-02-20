@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 
 export default function LandingPage() {
     const [films, setFilms] = useState([]);
+    const [actors, setActors] = useState([]);
 
     useEffect(() => {
         (async function run() {
@@ -11,6 +12,12 @@ export default function LandingPage() {
 
             if (res.ok) {
                 setFilms([...await res.json()]);
+            }
+
+            const res2 = await fetch('http://localhost:8080/actors');
+
+            if (res2.ok) {
+                setActors([...await res2.json()]);
             }
         })();
     }, [])
@@ -21,6 +28,13 @@ export default function LandingPage() {
             <div className="films">
                 {films.map((film) => {
                     return <FilmCard film={film} />
+                })}
+            </div>
+
+            <h1>Top 5 Actors (All-time)</h1>
+            <div className="films">
+                {actors.map((actor) => {
+                    return <ActorCard actor={actor} />
                 })}
             </div>
         </div>
@@ -40,6 +54,16 @@ export function FilmCard({ film }) {
                 </>
             }
             <button style={{ alignSelf: 'flex-end', cursor: 'pointer' }} onClick={() => setOpened(!opened)}>{opened ? 'Hide details' : 'Show details'}</button>
+        </div>
+    )
+}
+
+export function ActorCard({ actor }) {
+
+    return (
+        <div className="film-card">
+            <h2>{actor.firstName} {actor.lastName}</h2>
+            <p>Movie Appearances: {actor.movies}</p>
         </div>
     )
 }
