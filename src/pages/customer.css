@@ -5,3 +5,158 @@
     border: 1px solid gray;
     border-radius: 8px;
 }
+
+.page-container {
+    min-height: calc(100vh - 80px);
+    color: white;
+}
+
+.page-title {
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.search-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+    padding: 1.5rem;
+}
+
+.table-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+    padding: 1.5rem;
+}
+
+.search-input input,
+.search-input select {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+    color: white;
+}
+
+.search-input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input label {
+    color: #ffd700;
+}
+
+/* Table Styles */
+.table-card table {
+    color: white;
+}
+
+.table-card thead th {
+    color: #ffd700 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 215, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+}
+
+.table-card tbody td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-card tr:hover td {
+    background: rgba(255, 215, 0, 0.05);
+}
+
+/* Modal Form Styles */
+.customer-modal input,
+.customer-modal select {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+    color: white;
+}
+
+.customer-modal label {
+    color: #ffd700;
+}
+
+.customer-modal .mantine-Tabs-tab {
+    color: white;
+}
+
+.customer-modal .mantine-Tabs-tab[data-active] {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+/* Rental History Table */
+.rental-table {
+    margin-top: 1rem;
+}
+
+.rental-table th {
+    color: #ffd700;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.rental-table td {
+    color: white;
+}
+
+/* Modal Styles */
+.mantine-Modal-header {
+    background: linear-gradient(to right, #1a237e, #000051) !important;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+.mantine-Modal-close {
+    color: #ffd700 !important;
+}
+
+.mantine-Modal-close:hover {
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+/* Select Styles */
+.mantine-Select-dropdown {
+    background: #1a237e !important;
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+.mantine-Select-item {
+    color: white !important;
+}
+
+.mantine-Select-item[data-selected] {
+    background: rgba(255, 215, 0, 0.2) !important;
+    color: #ffd700 !important;
+}
+
+.mantine-Select-item[data-hovered] {
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+/* Pagination Buttons */
+.pagination-buttons button {
+    background: rgba(255, 215, 0, 0.1) !important;
+    color: #ffd700 !important;
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+    transition: all 0.3s ease;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    background: rgba(255, 215, 0, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.pagination-buttons button:disabled {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    border-color: transparent !important;
+}

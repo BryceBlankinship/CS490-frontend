@@ -1,0 +1,152 @@
+.page-container {
+    min-height: calc(100vh - 80px);
+    color: white;
+}
+
+.page-title {
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.search-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+    padding: 2rem;
+}
+
+.search-input input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+    color: white;
+}
+
+.search-input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input label {
+    color: #ffd700;
+}
+
+.film-result-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    padding: 1.5rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.film-result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ffd700, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.film-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.15);
+    border-color: rgba(255, 215, 0, 0.4) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.film-result-card:hover::before {
+    opacity: 1;
+}
+
+.film-title {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    letter-spacing: 0.5px;
+}
+
+/* Badge styles within film cards */
+.film-result-card .mantine-Badge-root {
+    background: rgba(255, 215, 0, 0.15) !important;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    color: #ffd700 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+}
+
+.film-result-card .mantine-Text-root {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.film-result-card .mantine-Text-root[c="dimmed"] {
+    color: rgba(255, 215, 0, 0.7) !important;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.customer-select {
+    margin-top: 1rem;
+}
+
+.customer-select label {
+    color: #ffd700;
+}
+
+.customer-select input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 215, 0, 0.2);
+    color: white;
+}
+
+.customer-select [data-selected] {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+/* Modal Styles */
+.mantine-Modal-header {
+    background: linear-gradient(to right, #1a237e, #000051) !important;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+.mantine-Modal-close {
+    color: #ffd700 !important;
+}
+
+.mantine-Modal-close:hover {
+    background: rgba(255, 215, 0, 0.1) !important;
+}
+
+/* Select Styles */
+.mantine-Select-dropdown {
+    background: #1a237e !important;
+    border: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+.mantine-Select-item {
+    color: white !important;
+}
+
+.mantine-Select-item[data-selected] {
+    background: rgba(255, 215, 0, 0.2) !important;
+    color: #ffd700 !important;
+}
+
+.mantine-Select-item[data-hovered] {
+    background: rgba(255, 215, 0, 0.1) !important;
+} 
